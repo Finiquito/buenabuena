@@ -26,12 +26,13 @@ export default function Home() {
       {/* Hero */}
       <section className="min-h-screen flex items-center justify-center px-6 pt-20">
         <div className="max-w-6xl">
-          <div className="mb-6">
+          <div className="w-[260px] md:w-[360px] mb-6">
             <Image 
               src="/logo-fondo-negro.svg" 
               alt="Buena Buena"
-              width={395}
-              height={232}
+              width={305}
+              height={200}
+              className="w-full h-auto"
             />
           </div>
           <p className="text-xl md:text-2xl text-buena-gris max-w-5xl leading-relaxed font-normal py-5">
