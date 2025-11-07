@@ -28,6 +28,7 @@
 
   --font-sans: var(--font-source-sans);
   --font-serif: var(--font-alegreya);
+  --font-grotesk: var(--font-space-grotesk);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -44,5 +45,5 @@ body {
 }
 
 h1, h2, h3{
-  font-family: var(--font-alegreya);
+  font-family: var(--font-space-grotesk);
 }

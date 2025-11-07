@@ -29,6 +29,13 @@ const alegreya = Alegreya({
   variable: '--font-alegreya',
 })
 
+import { Space_Grotesk } from 'next/font/google'
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-space-grotesk',
+})
 
 export const metadata: Metadata = {
   title: "Buena Buena, Creatividad Orgánica",
@@ -42,7 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${sourceSans.variable} ${alegreya.variable} font-normal`}>
+      <body className={`${sourceSans.variable} ${spaceGrotesk.variable} font-normal`}>
         {children}
       </body>
     </html>

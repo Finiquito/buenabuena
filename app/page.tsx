@@ -24,61 +24,195 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="min-h-screen flex items-center justify-center px-6 pt-20">
-        <div className="max-w-6xl">
-          <div className="w-[260px] md:w-[360px] mb-6">
-            <Image 
-              src="/logo-fondo-negro.svg" 
-              alt="Buena Buena"
-              width={305}
-              height={200}
-              className="w-full h-auto"
-            />
-          </div>
-          <p className="text-xl md:text-2xl text-buena-gris max-w-5xl leading-relaxed font-normal py-5">
-           Buena Buena es (o quiere ser) un colectivo de creativos donde valoramos el trabajo honesto
-            y la colaboración real. Trabajamos desde distintas partes del mundo, 
-            nos unimos por proyecto, compartimos ideas y decisiones, manteniendo
-             cada uno su identidad y autonomía.
-          </p>
-          <div className="bg-buena-amarillo rounded-2xl text-black inline-block px-6 py-2 mt-10 text-lg font-semibold">
-            CREATIVIDAD ORGÁNICA
-          </div>
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 mt-10">
-          <div>
-            <h3 className="text-4xl font-normal mb-6 font-serif">
-             Somos y queremos ser...
-            </h3>
-            <p className="text-white/70 text-lg leading-relaxed mb-4 font-normal">
-              Trabajamos desde distintas partes del mundo, nos unimos por proyecto, 
-              compartimos conocimiento y decisiones, manteniendo cada uno su 
-              identidad y autonomía.
-            </p>
-           <p className="text-white/70 text-lg leading-relaxed font-normal">
-            Llevamos casi dos décadas trabajando con todo tipo de organizaciones 
-            y personas: desde empresas y municipalidades hasta emprendedores con 
-            una idea y ganas de hacerla realidad.
-          </p>
-          </div>
-          <div>
-            <div className="p-8 rounded-lg mt-8">
-              <p className="text-white/70 text-lg leading-relaxed font-normal">
-                Podemos ayudarte a:
-                Crear o lanzar tu marca, tu proyecto o empresa. Te acompañamos 
-                desde la estrategia hasta la ejecución, con diseño que funciona 
-                y creatividad que conecta.
-              </p>
-            </div>
-          </div>
-        </div>
-          
-        </div>
-      </section>
+<section className="h-[85vh] flex items-center justify-center px-6 relative">
+  <div className="max-w-6xl w-full">
+    {/* Logo */}
+    <div className="w-[280px] md:w-[380px] mb-12">
+      <Image 
+        src="/logo-fondo-negro.svg" 
+        alt="Buena Buena"
+        width={305}
+        height={200}
+        className="w-full h-auto"
+      />
+    </div>
 
+    {/* Menú lateral oculto */}
+<div className="fixed right-0 top-0 h-screen w-full pointer-events-none z-5 hidden md:block">
+  {/* Área sensible al hover - más ancha */}
+  <div className="absolute right-0 top-0 h-full w-32 pointer-events-auto group">
+    
+    {/* Línea horizontal que cruza toda la web - SIEMPRE VISIBLE */}
+    <div className="fixed left-1/2 top-1/2 w-1/2 h-[1px] bg-gradient-to-r from-buena-gris/0 to-buena-gris/20 mt-9 z-4"></div>
+    
+    {/* Contenedor del menú que se desliza */}
+    <div className="absolute right-30 top-1/2 -translate-y-1/2 translate-x-full group-hover:translate-x-25 transition-transform duration-700 ease-out w-[280px]">
+      
+      {/* SVG con las ramas orgánicas - MÁS ANCHAS */}
+      <svg width="280" height="500" viewBox="0 0 280 500" className="absolute right-0 top-0">
+        
+        {/* Punto de conexión con línea principal */}
+        <circle cx="19" cy="250" r="2" fill="#eade27" opacity="0.5"/>
+        
+        {/* Ramas que se bifurcan - MÁS SEPARADAS Y ANCHAS */}
+        
+        {/* Rama 1 - A Home (Amarilla) */}
+        <path 
+          d="M 20 250 Q 60 250, 80 150 T 150 50" 
+          stroke="#eade27" 
+          strokeWidth="1.5" 
+          fill="none"
+          opacity="0.6"
+        />
+        
+        {/* Rama 2 - A Personas (Gris) */}
+        <path 
+          d="M 20 250 Q 60 250, 80 190 T 150 140" 
+          stroke="white" 
+          strokeWidth="1" 
+          fill="none"
+          opacity="0.2"
+        />
+
+         {/* Rama 2 - A Personas (Gris) */}
+        <path 
+          d="M 20 250 Q 60 250, 80 250 T 150 230" 
+          stroke="white" 
+          strokeWidth="1" 
+          fill="none"
+          opacity="0.2"
+        />
+        
+        {/* Rama 3 - A Proyectos (Gris) */}
+        <path 
+          d="M 20 250 Q 60 250, 80 290 T 150 325" 
+          stroke="white" 
+          strokeWidth="1" 
+          fill="none"
+          opacity="0.2"
+        />
+        
+        {/* Rama 4 - A Contacto (Gris) */}
+        <path 
+          d="M 20 250 Q 60 250, 80 330 T 150 420" 
+          stroke="white" 
+          strokeWidth="1" 
+          fill="none"
+          opacity="0.2"
+        />
+      </svg>
+      
+      {/* Items del menú - MÁS SEPARADOS */}
+      <div className="relative pl-[170px] space-y-16 pt-8">
+        <a 
+          href="/" 
+          className="block text-buena-amarillo hover:text-buena-amarillo/70 text-xl font-light transition-all duration-300 tracking-wide"
+        >
+          Home
+        </a>
+        <a 
+          href="#personas" 
+          className="block text-buena-gris/80 hover:text-buena-gris text-xl font-light transition-all duration-300 tracking-wide"
+        >
+          Personas
+        </a>
+        <a 
+          href="#proyectos" 
+          className="block text-buena-gris/80 hover:text-buena-gris text-xl font-light transition-all duration-300 tracking-wide"
+        >
+          Proyectos
+        </a>
+        <a 
+          href="#proyectos" 
+          className="block text-buena-gris/80 hover:text-white text-xl font-light transition-all duration-300 tracking-wide"
+        >
+          Somos
+        </a>
+        <a 
+          href="#contacto" 
+          className="block text-buena-gris/80 hover:text-white text-xl font-light transition-all duration-300 tracking-wide"
+        >
+          Contacto
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    {/* Frase potente */}
+    <h1 className="text-5xl md:text-6xl font-grotesk font-normal leading-tight max-w-4xl mb-16">
+      Trabajo honesto<br/>
+      <span className="text-white/70">Colaboración real</span><br/>
+      <span className="text-white/50">Ideas que funcionan</span>
+    </h1>
+
+    {/* Tag arquitectónico - Módulo amarillo flotante */}
+    <div className="relative inline-block group cursor-pointer">
+      <div className="absolute -inset-4 bg-buena-gris/10 rounded-3xl blur-xl group-hover:bg-buena-amarillo/20 transition-all duration-500"></div>
+      <div className="relative">
+        <div className="flex items-center gap-4">
+          <div className="w-2 h-2 bg-buena-amarillo rounded-full animate-pulse"></div>
+          <div className="border-l-1 border-buena-amarillo pl-6 py-3">
+            <span className="text-2xl md:text-3xl font-light tracking-wider text-white/90">
+              CREATIVIDAD ORGÁNICA
+            </span>
+          </div>
+          <div className="w-16 h-[2px] bg-buena-amarillo/50"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Indicador de scroll */}
+ 
+</section>
+
+{/* 3 Bloques que se asoman */}
+<section className="px-6 pb-32 -mt-16">
+  <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+    
+    {/* Bloque 1 */}
+    <div className="group relative">
+      <div className="absolute inset-0 bg-gradient-to-br from-buena-amarillo/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div className="relative p-8 border-t border-white/10 hover:border-buena-amarillo/30 transition-all duration-500">
+        <div className="text-4xl font-semibold font-grotesk text-white/30 mb-6">QUÉ</div>
+        <p className="text-white/70 text-lg leading-relaxed">
+          Diseño, ilustración, desarrollo web, fotografía, escritura y dirección creativa 
+          desde distintas partes del mundo.
+        </p>
+      </div>
+    </div>
+
+    {/* Bloque 2 */}
+    <div className="group relative">
+      <div className="absolute inset-0 bg-gradient-to-br from-buena-amarillo/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div className="relative p-8 border-t border-white/10 hover:border-buena-amarillo/30 transition-all duration-500">
+        <div className="text-4xl font-semibold font-grotesk text-white/30 mb-6">CÓMO</div>
+        <p className="text-white/70 text-lg leading-relaxed">
+          Nos organizamos como colectivo colaborativo. Las decisiones se toman 
+          entre quienes participan de cada proyecto.
+        </p>
+      </div>
+    </div>
+
+    {/* Bloque 3 */}
+    <div className="group relative">
+      <div className="absolute inset-0 bg-gradient-to-br from-buena-amarillo/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div className="relative p-8 border-t border-white/10  hover:border-buena-amarillo/30 transition-all duration-500">
+        <div className="text-4xl font-semibold font-grotesk text-white/30 mb-6">PARA QUÉ</div>
+        <p className="text-white/70 text-lg leading-relaxed">
+          Estrategia de marca, publicaciones, identidad visual, campañas publicitarias y plataformas digitales. Proyectos de cualquier escala.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
 
       {/* Personas */}
       <section id="personas" className="py-32 bg-buena-light px-6 border-t border-buena-gris30">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto z-10 relative">
           <h2 className="text-5xl md:text-6xl font-normal text-buena-negro mb-4">Somos</h2>
           <p className="text-neutral-800 text-xl mb-12 max-w-2xl">
             Creativos y amigos trabajando desde distintas partes del mundo.
